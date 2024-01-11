@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="screen">
+      <div class="screen__content">
+        <div class="gambar">
+          <img src="assets/logo.png" >
+          <h6>Universitas Bogor Teknologi</h6>
+        </div>
+        <form class="login">
+          <div class="login__field">
+            <ion-icon name="person" class="login__icon fas fa-user"></ion-icon>
+            <input required="required" name="npm" type="text" class="login__input" placeholder="NPM" [(ngModel)]="npm">
+          </div>
+          <div class="login__field">
+            <ion-icon name="lock-closed" class="login__icon fas fa-lock"></ion-icon>
+            <input required="required" name="password" type="password" class="login__input" placeholder="Password" [(ngModel)]="password">
+          </div>
+          <button class="button login__submit" (click)="login()">
+            <span class="button__text">Log In Now</span>
+            <ion-icon name="chevron-forward" class="button__icon fas fa-chevron-right"></ion-icon>
+          </button>				
+        </form>
+      </div>
+      <div class="screen__background">
+        <span class="screen__background__shape screen__background__shape4"></span>
+        <span class="screen__background__shape screen__background__shape3"></span>		
+        <span class="screen__background__shape screen__background__shape2"></span>
+        <span class="screen__background__shape screen__background__shape1"></span>
+      </div>		
+    </div>
+  </div>
+</ion-content>

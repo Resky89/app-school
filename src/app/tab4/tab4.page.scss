@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: Poppins, sans-serif;
+  }
+  tbody tr:nth-child(odd) {
+    background-color: rgb(113, 189, 252);
+  }
+  tbody tr:nth-child(even) {
+    background-color: rgb(173, 212, 250);
+  }
+.custom-search-bar {
+    --margin-bottom: 10px; /* Adjust the margin as needed */
+    --border-radius: 15px; /* Optional: Add border-radius for a rounded look */
+  }
+  

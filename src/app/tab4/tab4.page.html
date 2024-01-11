@@ -1,0 +1,113 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title> Status Calon Mahasiswa </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
+
+<ion-content [fullscreen]="true">
+  <ion-segment [(ngModel)]="segment" (ionChange)="segmentBerubah()">
+    <ion-segment-button value="data">
+      <p>Data Pendaftaran</p>
+    </ion-segment-button>
+    <ion-segment-button value="fee">
+      <p>Fee Akun</p>
+    </ion-segment-button>
+  </ion-segment>
+  <ion-card *ngIf="segment === 'data'">
+    <div class="container bootstrap snippets bootdey">
+      <h5>Data Calon Mahasiswa Mendaftar</h5>
+      <ion-searchbar
+        [(ngModel)]="searchText"
+        (ionInput)="search()"
+        animated="true"
+        placeholder="Cari Reg ID atau Nama"
+        class="custom-search-bar"
+      ></ion-searchbar>
+
+      <div class="table-responsive">
+        <table
+          class="table colored-header datatable project-list table-striped table-hover"
+        >
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Reg ID</th>
+              <th scope="col">Password</th>
+              <th scope="col">Nama Lengkap</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr *ngFor="let data of filteredData">
+              <td>{{data.no}}</td>
+              <td>{{data.kd_reg}}</td>
+              <td>{{data.pass}}</td>
+              <td>{{data.nama}}</td>
+              <td>
+                <span *ngIf="data.status === '0'" class="badge text-bg-warning"
+                  >Menunggu Verifikasi</span
+                >
+                <span *ngIf="data.status === '1'" class="badge text-bg-success"
+                  >Verifikasi Pendaftaran OK</span
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </ion-card>
+
+  <ion-card *ngIf="segment === 'fee'">
+    <div class="container bootstrap snippets bootdey">
+      <h5>Pengecekan Fee Akun</h5>
+      <ion-searchbar
+        [(ngModel)]="searchText"
+        (ionInput)="search()"
+        animated="true"
+        placeholder="Cari Reg ID atau Nama"
+        class="custom-search-bar"
+      ></ion-searchbar>
+
+      <div class="table-responsive">
+        <table
+          class="table colored-header datatable project-list table-striped table-hover"
+        >
+          <thead>
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">Reg ID</th>
+              <th scope="col">Nama Lengkap</th>
+              <th scope="col">Fee</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr *ngFor="let data of filteredData">
+              <td>{{data.no}}</td>
+              <td>{{data.kd_reg}}</td>
+              <td>{{data.nama}}</td>
+              <td>Rp.{{data.fee}}</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Total Fee</td>
+              <td>Rp.{{getTotalFee()}}</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </ion-card>
+
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+</ion-content>
