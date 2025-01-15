@@ -14,7 +14,6 @@ Welcome to the App School repository! This project aims to provide a comprehensi
 - [API](#api)
 - [Aplikasi Android / Android Application](#aplikasi-android--android-application)
 - [Kontribusi / Contributing](#kontribusi--contributing)
-- [Lisensi / License](#lisensi--license)
 
 ## 📖 Pengenalan / Introduction
 
@@ -77,3 +76,41 @@ Setelah menginstal dependensi, Anda dapat menjalankan aplikasi Ionic dengan meng
 
 ```sh
 ionic serve
+```
+
+Once the dependencies are installed, you can run the Ionic application using the following command to view it in the browser:
+
+```sh
+ionic serve
+```
+
+## API
+
+API untuk aplikasi ini dibangun menggunakan PHP Native dan berada di dalam folder `api_uas`.
+
+The API for this application is built using PHP Native and is located in the `api_uas` folder.
+
+## Aplikasi Android / Android Application
+
+File APK untuk aplikasi Android dapat diunduh dari folder `Aplikasi android`.
+
+The APK file for the Android application can be downloaded from the `Aplikasi android` folder.
+
+## 🤝 Kontribusi / Contributing
+
+Kami menyambut kontribusi untuk App School! Jika Anda memiliki ide, saran, atau laporan bug, silakan buka issue atau kirim pull request.
+
+We welcome contributions to App School! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request.
+
+1. Fork repositori / Fork the repository
+2. Buat cabang baru (`git checkout -b feature/your-feature`) / Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit perubahan Anda (`git commit -am 'Add some feature'`) / Commit your changes (`git commit -am 'Add some feature'`)
+4. Push ke cabang (`git push origin feature/your-feature`) / Push to the branch (`git push origin feature/your-feature`)
+5. Buat pull request / Open a pull request
+
+---
+
+Terima kasih telah mengunjungi repositori kami! Jika Anda memiliki pertanyaan atau butuh bantuan lebih lanjut, jangan ragu untuk menghubungi kami.
+
+Thank you for visiting our repository! If you have any questions or need further assistance, feel free to contact us.
+```
