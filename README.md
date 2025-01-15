@@ -108,9 +108,3 @@ We welcome contributions to App School! If you have any ideas, suggestions, or b
 4. Push ke cabang (`git push origin feature/your-feature`) / Push to the branch (`git push origin feature/your-feature`)
 5. Buat pull request / Open a pull request
 
----
-
-Terima kasih telah mengunjungi repositori kami! Jika Anda memiliki pertanyaan atau butuh bantuan lebih lanjut, jangan ragu untuk menghubungi kami.
-
-Thank you for visiting our repository! If you have any questions or need further assistance, feel free to contact us.
-```
